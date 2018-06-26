@@ -27,6 +27,9 @@ ul {
 .mt_150 {
   margin-top:150px;
 }
+.mb_20 {
+  margin-bottom: 20px;
+}
 
 /* 左边侧边栏 */
 .lt_aside {
@@ -109,6 +112,7 @@ ul {
   position: fixed;
   top:0;
   left:0px;
+  z-index: 666;
   background-color:#3C8DBC;
   transition: all 1s;
 
