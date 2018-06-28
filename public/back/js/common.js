@@ -8,7 +8,7 @@ if(location.href.indexOf("login.html")===-1){
     url:"/employee/checkRootLogin",
     dataType:"json",
     success:function(info){
-      console.log(info)
+      // console.log(info)
       if(info.error===400){
         // 未登录 直接跳转到登录页
         location.href="login.html";
@@ -27,12 +27,12 @@ if(location.href.indexOf("login.html")===-1){
 
 // 第一个ajax发送时, 开启进度条
 $(document).ajaxStart(function () {
-  console.log(1)
+  // console.log(1)
   NProgress.start();
 });
 // 所有的ajax请求完成时调用, 关闭进度条
 $(document).ajaxStop(function () {
-  console.log(1)
+  // console.log(1)
   // NProgress.done();
   //模拟网络延迟
   setTimeout(function(){
