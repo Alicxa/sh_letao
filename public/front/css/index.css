@@ -1,0 +1,50 @@
+/* 导航部分 */
+
+.lt_nav {
+  padding:10px;
+}
+.lt_nav li {
+  float: left;
+  width: 33.33%
+}
+.lt_nav li a {
+  
+  display: block;
+}
+.lt_nav li a img {
+  width: 100%;
+}
+
+/* 产品部分 */
+.lt_product {
+  padding:10px;
+}
+
+.lt_product .product_item {
+  border:1px solid #ccc;
+  padding:10px;
+  width: 48%;
+  float: left;
+  display: block;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+
+
+}
+.lt_product .product_item:nth-child(odd){
+  margin-right: 4%;
+}
+.lt_product .product_item img {
+  display: block;
+  width: 100%;
+}
+.lt_product .product_item .price {
+  color:red;
+}
+.lt_product .product_item .oldprie {
+  text-decoration: line-through;
+}
+
+
