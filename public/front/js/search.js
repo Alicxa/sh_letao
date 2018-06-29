@@ -47,11 +47,11 @@ $(function () {
 
   //删除一条记录 
   $(".lt_history").on("click", ".icon_delete", function () {
-    var that = this
+    var that = this;
 
 
     //点击按钮的时候 弹出模态框 
-    mui.confirm("您是否要清空全部的历史记录", "温馨提示", ["取消", "确认"], function (e) {
+    mui.confirm("您是否要清空当前这一条记录", "温馨提示", ["取消", "确认"], function (e) {
 
       // localStorage.removeItem("search_list");
       // //重新渲染 
@@ -87,7 +87,8 @@ $(function () {
   $(".search_btn").click(function () {
     var key = $(".search_input").val();
     if (key === "") {
-      mui.toast("请输入关键字")
+      mui.toast("请输入关键字");
+      return;
     }
 
     //获取数组
