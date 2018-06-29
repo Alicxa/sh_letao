@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 需求: 地址栏参数 ?name=pp&age=18&desc=%E5%B8%85
+    //      将其解析成对象键值的格式, 例如: { name: "pp", age: 18, desc: "帅" };
+    function getSearchObj() {
+      var obj = {};
+      var search = location.search;
+      search = decodeURI(search);
+      search = search.slice(1);
+      // name=pp&age=18&desc=%E5%B8%85
+      var arr = search.split("&");
+      arr.forEach(function (v, i) { //name=pp
+        var key = v.split("=")[0];
+        var value = v.split("=")[1];
+        obj[key] = value;
+      })
+      return obj;
+    }
+    var obj=getSearchObj()
+    console.log(obj)
+
+
+
+  </script>
+</body>
+
+</html>
